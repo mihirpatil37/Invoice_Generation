@@ -6,8 +6,6 @@ from pathlib import Path
 filepaths = glob.glob("invoices/*.xlsx")
 
 for filepath in filepaths:
-
-
     pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.add_page()
 
@@ -58,10 +56,8 @@ for filepath in filepaths:
 
     # Add company name and logo
     pdf.set_font(family="Times", size=14, style="B")
-    pdf.cell(w=25, h=8, txt=f"PythonHow")
-    pdf.image("pythonhow.png", w=10)
-
-
-
+    pdf.cell(w=20, h=8, txt="Patil & Company")
+    pdf.cell(w=20, h=8, txt="  ")
+    pdf.image("mk-letter-logo.jpg", w=20, h=8)
 
     pdf.output(f"PDFs/{filename}.pdf")
