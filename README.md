@@ -1,43 +1,43 @@
 # Invoice Generator Project 📄→📊→📑
 
-This Python project automates the generation of professional invoices from Excel files, saving them as PDFs. Perfect for streamlining billing workflows! 💼✨  
+This Python project automates the generation of professional invoices from Excel files, saving them as PDFs. Perfect for streamlining billing workflows! 
 
 ---
 
-## Features 🚀
+## Features 
 
 - **PDF Generation**: Convert Excel data into polished PDF invoices.  
 - **Batch Processing**: Handle multiple files at once (`/invoices/` directory).  
 - **Table Formatting**: Create clean, structured tables with headers.  
-- **Auto-Totals**: Calculate sums dynamically. ➕  
-- **Branding**: Add company name (`Patil & Company`) and logo (`mk-letter-logo.jpg`). 🏢  
-- **Custom Styling**: Adjust fonts, colors, and layout. 🎨  
+- **Auto-Totals**: Calculate sums dynamically. 
+- **Branding**: Add company name (`Patil & Company`) and logo (`mk-letter-logo.jpg`). 
+- **Custom Styling**: Adjust fonts, colors, and layout. 
 
 ---
 
-## How It Works ⚙️
+## How It Works 
 
 1. **Input**:  
    - Excel files (e.g., `10002-2023.1.18.xlsx`) in `/invoices/`.  
    - Required columns: `product_id`, `product_name`, `amount_purchased`, `price_per_unit`, `total_price`.  
 
 2. **Processing**:  
-   - 📂 Extract invoice number/date from filenames.  
-   - 📊 Build PDFs with headers, tables, and totals.  
-   - 🏷️ Add branding (logo + company name) at the end.  
+   - Extract invoice number/date from filenames.  
+   - Build PDFs with headers, tables, and totals.  
+   - Add branding (logo + company name) at the end.  
 
 3. **Output**:  
-   - 💾 Save PDFs to `/PDFs/` with matching names.  
+   - Save PDFs to `/PDFs/` with matching names.  
 
 ---
 
-## Code Highlights 💡
+## Code Highlights
 
 ### Logo Integration  
 ```python
    pdf.set_font(family="Times", size=14, style="B")
    pdf.cell(w=20, h=8, txt="Patil & Company")
-   pdf.image("mk-letter-logo.jpg", w=20, h=8)  # 🖼️ Logo placement
+   pdf.image("mk-letter-logo.jpg", w=20, h=8)  # Logo placement
 ```
 ## Invoice Nr.10002  
 Date: 2023.1.18  
@@ -46,9 +46,9 @@ Date: 2023.1.18
 |------------|--------------|--------|------------|-------------|  
 | 8870011    | Paint Brush  | 2      | 34         | 68          |  
 
-The total price is 68. 💰  
+The total price is 68.   
 
-## Skills Learned 🛠️
+## Skills Learned 
 
 | Skill Category         | Description                                                                 | Tools/Libraries Used  |
 |------------------------|-----------------------------------------------------------------------------|-----------------------|
@@ -58,7 +58,7 @@ The total price is 68. 💰
 | **File Management**    | Organized file inputs/outputs and handled path operations.                  | `glob`, `pathlib`     |
 | **Branding**           | Integrated company identity (logo + styling) into generated documents.      | `FPDF`, Image Handling|
 
-## Setup & Usage 🏁
+## Setup & Usage 
 
 ### Requirements
 - Python 3.6+
@@ -66,7 +66,7 @@ The total price is 68. 💰
   ```bash
   pip install pandas fpdf
   ```
-## How to Run 🚀
+## How to Run 
 
 ### Step-by-Step Guide
 
